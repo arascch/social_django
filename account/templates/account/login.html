@@ -7,7 +7,7 @@
 {% block content %}
     
     <h1>log_in</h1>
-    <p>please , use the following form for log in to out site</p>
+    <p>please , use the following form for log in to out site , if you don't have an account <a href="{% url "register" %}"> register here</a></p>
     <form action="." method="POST">
         {{form.as_p}}
         {% csrf_token %}
