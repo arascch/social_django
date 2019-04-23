@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "D:\\Django_env\\Scripts\\python.exe"
+    "python.pythonPath": "D:\\Django_env\\Scripts\\python.exe",
+    "python.linting.pylintEnabled": true
 }

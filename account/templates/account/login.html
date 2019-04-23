@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+  log-in
+{% endblock title %}
+
+{% block content %}
+    
+    <h1>log_in</h1>
+    <p>please , use the following form for log in to out site</p>
+    <form action="." method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+        <p><input type="submit" value="log in"></p>
+    </form>
+
+{% endblock content %}
