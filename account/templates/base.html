@@ -51,6 +51,21 @@
                 
         </span>
     </div>
+    
+    {% if messages %}
+        <ul>
+            
+            {% for message in messages %}
+                <li class = "{{message.tags}}"> 
+                    {{ message|safe }}
+                    <a href="#" class="close"> x </a> 
+                </li>
+            {% endfor %}
+                
+        </ul>
+        
+    {% endif %}
+        
     <div "content">
         {% block content %}
           
