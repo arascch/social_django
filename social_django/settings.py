@@ -25,13 +25,13 @@ SECRET_KEY = '-$ykfqnw^(tj)k&c6ie!hxm-)krr*cv$u0+l7k^^3k&d85c_nn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com' , 'localhost' , '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    
+    'social_django',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -39,7 +39,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'account.apps.AccountConfig',
     'django.contrib.admin',
-    'social_django',
+    
+]
+
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.open_id.openidAuth',
+    'social_core.backends.google.GoogleOpenId',
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.google.GoogleOAuth',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.yahoo.YahooOpenId',
+    'django.contrib.auth.backends.ModelBackend',
+
 ]
 
 MIDDLEWARE = [
@@ -129,3 +140,5 @@ EMAIL_BACKEND = 'django.core.mail.backend.console.Emailbackend'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media/')
+
+SOCIAL_AUTH_POSTGRES_JSONFIELD = True
