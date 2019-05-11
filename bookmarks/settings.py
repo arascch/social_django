@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social_django',
+    'images.apps.ImagesConfig',
 ]
 
 MIDDLEWARE = [
@@ -149,5 +150,5 @@ SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_TWITTER_KEY = '' # Twitter Consumer Key
 SOCIAL_AUTH_TWITTER_SECRET = '' # Twitter Consumer Secret
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '' # Google Consumer Key
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '' # Google Consumer Secret
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '58542570372-ehbo4grf762o0oejr7sth11m3rnpl144.apps.googleusercontent.com' # Google Consumer Key
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '2uYi1CiXi7Ue8wJ3cS40ENk5' # Google Consumer Secret
