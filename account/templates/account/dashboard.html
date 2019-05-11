@@ -1,10 +1,8 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-{% block title %}
-  Dashboard
-{% endblock title %}
+{% block title %}Dashboard{% endblock %}
 
 {% block content %}
   <h1>Dashboard</h1>
-  <p>Welcome to your dashboard . you can <a href="{% url "edit" %}"> edit your profile </a> or <a href="{% url "password_change" %}"> change your password</a></p>
-{% endblock content %}
+  <p>Welcome to your dashboard. You can <a href="{% url "edit" %}">edit your profile</a> or <a href="{% url "password_change" %}">change your password</a>.</p>
+{% endblock %}
